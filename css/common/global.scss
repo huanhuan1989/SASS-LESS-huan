@@ -1,0 +1,103 @@
+@import "common";
+@charset "UTF-8";
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}
+html{overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+body,div,dl,dt,dd,ul,ol,h1,h2,h3,h4,h5,h6,pre,hr,caption,button,form,fieldset,legend,menu,input,textarea,select,p,blockquote,th,td{margin:0;padding:0;}
+body{font:100% "Microsoft YaHei","Arial Narrow",HELVETICA;background:#f1f1f1;-webkit-text-size-adjust:100%;}
+h1,h2,h3,h4,h5,h6{font-style:100%;}
+table{border-collapse:collapse;border-spacing:0;}
+ul,ol{list-style:none;}
+fieldset,img{border:none;}
+abbr,acronym{border:0;font-variant: normal;}
+em,i{font-style: normal;}
+input,select,textarea{outline:none;border:none;background:none;}
+textarea{resize:none;}
+a{text-decoration:none;}
+p{word-wrap:break-word;/*white-space:pre-wrap;*/word-break:break-all;}
+input[type="submit"],input[type="reset"],input[type="button"],button { -webkit-appearance: none;}
+a,a:link,a:visited,a:hover{color:nth($g_c,1);}
+/*mlib-box*/
+.mlib-box{
+  width: 100%;
+  color:nth($g_c,1);
+  @extend %clearfix;
+  @include rem(padding-bottom,45px);
+  .mlib-title{
+    @include rem(padding,12px);
+    @include rem(font-size,16px);
+    @include rem(line-height,20px);
+    font-weight:normal;
+  }
+  .mlib-cont{
+    @include rem(font-size,16px);
+    @include rem(line-height,19px);
+    @include rem(padding-left,12px);
+    @include rem(padding-right,12px);
+  }
+  .mlib-cont dl{
+    @include rem(padding-bottom,17px);
+  }
+  .mlib-my-answer{
+    color:nth($g_c,4);
+    @include rem(padding,12px);
+    @include rem(font-size,14px);
+    @include rem(line-height,36px);
+  }
+  .mlib-my-answer ul{
+    background:nth($g_c,2);
+    border:1px solid nth($g_c,3);
+    @include rad(3px);
+    @include rem(padding-left,19px);
+    @include rem(padding-right,19px);
+  }
+  .mlib-my-answer li{
+    width:48%;
+    @include inline;
+  }
+  .mlib-my-parsing{
+    background:nth($g_c,5);
+    @include rem(padding,12px);
+  }
+  .mlib-title-h2{
+    color:nth($g_c,6);
+    @include rem(font-size,14px);
+  }
+  .myp-cont{
+    background:nth($g_c,7);
+    @include rad(3px);
+    @include rem(padding,12px);
+    @include rem(margin-top,8px);
+    .mlib-title-h3{
+      @include rem(font-size,14px);
+    }
+    .mlib-cont-p{
+      @include rem(font-size,12px);
+    }
+  }
+}
+/*footer-num*/
+.mlib-footer{
+  position:fixed;
+  left:0;
+  bottom:0;
+  background:nth($g_c,7);
+  display:block;
+  width:100%;
+  @include rem(height,46px);
+  @include rem(font-size,11px);
+  li{
+    width:19%;
+    text-align:center;
+    @include inline-block(false);
+    a{
+      display:block;
+      text-align:center;
+    }
+    .mlib-num-prev,.mlib-num-answer,.mlib-num-papers,.mlib-num-select,.mlib-num-next{
+      @include rem(width,24px);
+      @include rem(height,24px);
+      display:block;;
+    }
+  }
+}
+
