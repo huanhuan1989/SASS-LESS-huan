@@ -15,7 +15,7 @@ $g_c:#606060 #e7ede1 #58b526 #336600 #cae1b4 #437614 #fff;
 //圆角
 @mixin rad($amount:0){
   border-radius:$amount;
-  -web-border-radius:$amount;
+  -webkit-border-radius:$amount;
   -moz-border-radius:$amount;
   -ms-border-radius:$amount;
 }
